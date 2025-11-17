@@ -16,6 +16,8 @@ toolRegistry.register('update_collection', {
       .describe('New permission setting for the collection (optional)')
       .optional(),
     color: z.string().describe('New color for the collection (optional)').optional(),
+    icon: z.string().describe('New icon for the collection (emoji or outline-icons package name) (optional)').optional(),
+    sharing: z.boolean().describe('Whether public sharing of documents is allowed (optional)').optional(),
   },
   async callback(args) {
     try {
@@ -37,6 +39,14 @@ toolRegistry.register('update_collection', {
 
       if (args.color) {
         payload.color = args.color;
+      }
+
+      if (args.icon !== undefined) {
+        payload.icon = args.icon;
+      }
+
+      if (args.sharing !== undefined) {
+        payload.sharing = args.sharing;
       }
 
       const client = getOutlineClient();

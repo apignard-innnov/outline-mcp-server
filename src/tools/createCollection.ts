@@ -15,7 +15,8 @@ toolRegistry.register('create_collection', {
       .describe('Permission level for the collection')
       .optional(),
     color: z.string().describe('Hex color code for the collection').optional(),
-    private: z.boolean().describe('Whether this collection is private').optional(),
+    icon: z.string().describe('Icon for the collection (emoji or outline-icons package name)').optional(),
+    sharing: z.boolean().describe('Whether public sharing of documents is allowed').optional(),
   },
   async callback(args) {
     try {
@@ -35,8 +36,12 @@ toolRegistry.register('create_collection', {
         payload.color = args.color;
       }
 
-      if (args.private !== undefined) {
-        payload.private = args.private;
+      if (args.icon !== undefined) {
+        payload.icon = args.icon;
+      }
+
+      if (args.sharing !== undefined) {
+        payload.sharing = args.sharing;
       }
 
       const client = getOutlineClient();
