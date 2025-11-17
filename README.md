@@ -26,21 +26,44 @@ One click install in Cursor:
   - ✅ Update existing documents
   - ✅ Delete documents
   - ✅ List documents
+  - ✅ List draft documents
+  - ✅ List recently viewed documents
   - ✅ Search documents
   - ✅ Ask natural language questions about documents
   - ✅ Create templates from existing documents
   - ✅ Move documents to different collections or locations
   - ✅ Archive documents
+  - ✅ Restore archived/deleted documents
+  - ✅ Unpublish documents (move to draft)
+  - ✅ Export documents as markdown
 
 - **Collection Management**
   - ✅ Get collection details
   - ✅ List collections
   - ✅ Create and update collections
+  - ✅ Delete collections
+  - ✅ Export collections (markdown, json, html)
 
 - **Comment Management**
   - ✅ Create comments on documents
   - ✅ Update existing comments
   - ✅ Delete comments
+
+- **Share Management**
+  - ✅ Create public share links with password protection and expiration
+  - ✅ List all public shares
+  - ✅ Get share details
+  - ✅ Update share settings
+  - ✅ Revoke share links
+
+- **Star Management (Favorites)**
+  - ✅ Star documents and collections
+  - ✅ List starred items
+  - ✅ Unstar items
+
+- **Revision Management**
+  - ✅ List document revision history
+  - ✅ Get specific revision details
 
 - **User Management**
   - ✅ List and filter users
